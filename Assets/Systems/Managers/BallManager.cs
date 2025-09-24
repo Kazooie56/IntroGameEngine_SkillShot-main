@@ -58,7 +58,7 @@ public class BallManager : MonoBehaviour
             uIManager.GameplayUIController.UpdateShotsRemainingLabel();            
 
             ballStopped = false; // the ball should be moving at this point
-            rb_ball.AddForce(aimGuide.transform.forward * 25, ForceMode.VelocityChange);
+            rb_ball.AddForce(aimGuide.transform.forward * 20, ForceMode.VelocityChange); // was 25 instead of 20
 
             gameStateManager.SwitchToState(GameState_Rolling.Instance);
         }        
